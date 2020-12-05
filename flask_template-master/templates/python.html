@@ -1,0 +1,39 @@
+<h1>Here is a page with components rendered with python</h1>
+<ul>
+  <li><a href="/">Root Page</a></li>
+  <li><a href="/style">Root Page w/style</a></li>
+  <li><a href="/python">page w/python</a></li>
+  <li><a href="/database">page w/database</a></li>
+</ul>
+
+<p>all of our variables were defined in our "controller" a.k.a. flask_template.py</p>
+
+
+
+<h3>This is rendered from a list</h3>
+<ul>
+  {% for car in car_list%}
+    <li>{{ car }}</li>
+  {% endfor %}
+</ul>
+
+<h3>And this from a dictionary</h3>
+<table>
+  <tr>
+    <td>Make: </td>
+    <td> {{ car_dictionary["make"] }}</td>
+  </tr>
+  <tr>
+    <td>Model: </td>
+    <td> {{ car_dictionary["model"] }}</td>
+  </tr>
+  <tr>
+    <td>Yeah: </td>
+    <td> {{ car_dictionary["year"] }}</td>
+  </tr>
+  <tr>
+    <td>Color: </td>
+    <td> {{ car_dictionary["color"] }}</td>
+  </tr>
+</table>
+

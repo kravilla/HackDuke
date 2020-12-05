@@ -1,0 +1,19 @@
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheets/index.css') }}">
+  <script type="text/javascript" src="{{ url_for('static',filename='js/index.js') }}"></script>
+
+</head>
+
+<h1 id="main-header">This is the index page, but with style!</h1>
+<ul id="menu-nav">
+  <li class="menu-item"><a href="/">Root Page</a></li>
+  <li class="menu-item"><a href="/style">Root Page w/style</a></li>
+  <li class="menu-item"><a href="/python">page w/python</a></li>
+  <li class="menu-item"><a href="/database">page w/database</a></li>
+</ul>
+<p>Note how there is nothing special about this page, just plain html.</p>
+<p>This is a good option for pages that contain static information.</p>
+
+<p>We don't want just static pages though, we want pages powered by <span class="green">PYTHON!</span></p>
