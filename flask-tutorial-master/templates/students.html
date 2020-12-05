@@ -1,0 +1,12 @@
+<!doctype html>
+<title>Students</title>
+<h1>Students</h1>
+<ul>
+  {% for s in students: %}
+    <li>
+      {% for key, val in s.items(): %}
+          <h3>{{ key }}: {{ val }}</h3>
+      {% endfor %}
+    </li>
+  {% endfor %}
+</ul>
