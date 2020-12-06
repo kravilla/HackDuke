@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:sqlite:C:\Users\Justi\Desktop\GitHub_Projects\HackDuke\hackduke2020\test.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="db" uuid="47c4809d-0f1a-4c4b-907b-26cfb6f2e4c9">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Justi\Desktop\GitHub_Projects\HackDuke\hackduke2020\project\db.sqlite</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

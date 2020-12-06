@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h3>Enter your preferences!</h3>
+    <div>
+        <form method="POST" action="/login">
+            <div>
+                <div>
+                    <input type="text" name="username" placeholder="Confirm Username" autofocus="">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="text" name="pref1" placeholder="Enter your preference" autofocus="">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <input type="text" name="pref2" placeholder="Enter your preference" autofocus="">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="text" name="pref3" placeholder="Enter your preference" autofocus="">
+                </div>
+            </div>
+                        <div>
+                <div>
+                    <input type="text" name="pref4" placeholder="Enter your preference" autofocus="">
+                </div>
+            </div>
+                        <div>
+                <div>
+                    <input type="text" name="pref5" placeholder="Enter your preference" autofocus="">
+                </div>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

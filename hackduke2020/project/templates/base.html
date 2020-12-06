@@ -6,17 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Flask Auth Example</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 </head>
 
 <body>
-    <div class="loginHeader">
-        <h1>Welcome</h1>
-    </div>
-      <div class="center">
-          <a href="/login" class="button"><span>Login</span></a>
-        <a href="/signup" class="button"><span>Sign Up</span></a>
-      </div>
+    {% block content %}
+    {% endblock %}
 </body>
 
 </html>

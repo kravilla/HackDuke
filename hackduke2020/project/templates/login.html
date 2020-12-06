@@ -1,28 +1,36 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flask Auth Example</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-    <div class="wrapper">
-        <div class="container">
-            <h1 class="logInToAccount">Log in to your account below</h1>
-            <form class="form">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <div class="submitbutton">
-                    <a href="/home" id="loginbutton">Login</a>
+{% block content %}
+<div>
+    <h3>Login</h3>
+    <div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST" action="/login">
+            <div>
+                <div>
+                    <input type="text" name="username" placeholder="Your Username" autofocus="">
                 </div>
-            </form>
-        </div>
+            </div>
 
+            <div>
+                <div>
+                    <input type="password" name="password" placeholder="Your Password">
+                </div>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox">
+                    Remember me
+                </label>
+            </div>
+            <button>Login</button>
+        </form>
     </div>
-</body>
-
-</html>
+</div>
+{% endblock %}

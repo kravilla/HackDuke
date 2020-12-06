@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="login">
+  <h1>I want to be a...</h1>
+</div>
+<div class="center">
+  <a href="{{ url_for('auth.signupMentor') }}" class="button"><span>Mentor</span></a>
+  <a href="{{ url_for('auth.signupStudent') }}" class="button"><span>Learner</span></a>
+</div>
+{% endblock %}
