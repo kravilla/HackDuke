@@ -25,15 +25,15 @@ def profile():
         for row in csv_reader:
             for s_norm in row:
                 s_lower = s_norm.lower()
-                if str(current_user.pref1).lower() in s_lower:
+                if str(current_user.pref1) is not "" and str(current_user.pref1).lower() in s_lower:
                     courses.append(s_norm)
-                elif str(current_user.pref2).lower() in s_lower:
+                elif str(current_user.pref2) is not "" and str(current_user.pref2).lower() in s_lower:
                     courses.append(s_norm)
-                elif str(current_user.pref3).lower() in s_lower:
+                elif str(current_user.pref3) is not "" and str(current_user.pref3).lower() in s_lower:
                     courses.append(s_norm)
-                elif str(current_user.pref4).lower() in s_lower:
+                elif str(current_user.pref4) is not "" and str(current_user.pref4).lower() in s_lower:
                     courses.append(s_norm)
-                elif str(current_user.pref5).lower() in s_lower:
+                elif str(current_user.pref5) is not "" and str(current_user.pref5).lower() in s_lower:
                     courses.append(s_norm)
 
     return render_template('/profile.html', name=current_user.name, courses=courses)
