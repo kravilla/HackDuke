@@ -1,7 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Welcome, Anthony!
-</h1>
+    <div>
+            <h1 class="title">
+          Welcome, {{ name }}!
+        </h1>
+    </div>
+    <div>
+        <h2 class="tile">
+            Courses based on your preferences:
+        </h2>
+    </div>
+    <div>
+        <ul>
+        {% for s in courses %}
+              <li>{{ s }}</li>
+          {% endfor %}
+        </ul>
+    </div>
 {% endblock %}

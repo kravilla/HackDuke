@@ -18,23 +18,6 @@ def signup0():
     return render_template('/signup0.html')
 
 
-@auth.route('/prefs')
-def preferences():
-    return render_template('/prefs.html')
-
-
-@auth.route('/prefs', methods=['POST'])
-def addPreferences():
-    username = request.form.get('username')
-    user = Preferences.query.filter_by(username=username).first()
-    user.pref1 = request.form.get('pref1')
-    user.pref2 = request.form.get('pref2')
-    user.pref3 = request.form.get('pref3')
-    user.pref4 = request.form.get('pref4')
-    user.pref5 = request.form.get('pref5')
-    return redirect(url_for('main.profile'))
-
-
 @auth.route('/signup-student')
 def signupStudent():
     return render_template('/signup-student.html')
@@ -51,6 +34,13 @@ def signupStudent_post():
     email = request.form.get('email')
     username = request.form.get('username')
     password = request.form.get('email')
+    location = request.form.get('location')
+    pref1 = request.form.get('pref1')
+    pref2 = request.form.get('pref2')
+    pref3 = request.form.get('pref3')
+    pref4 = request.form.get('pref4')
+    pref5 = request.form.get('pref5')
+
     user = User.query.filter_by(email=email).first()
 
     if user:
@@ -58,14 +48,13 @@ def signupStudent_post():
         return redirect(url_for('auth.signupStudent'))
 
     new_user = User(name=name, email=email, username=username,
-                    password=generate_password_hash(password, method='sha256'), isMentor=False)
+                    password=generate_password_hash(password, method='sha256'), isMentor=False, location=location,
+                    pref1=pref1, pref2=pref2, pref3=pref3, pref4=pref4, pref5=pref5)
 
-    user_prefs = Preferences(username=username)
     db.session.add(new_user)
-    db.session.add(user_prefs)
     db.session.commit()
 
-    return redirect(url_for('auth.preferences'))
+    return redirect(url_for('auth.login'))
 
 
 @auth.route('/signup-mentor', methods=['POST'])
@@ -74,6 +63,12 @@ def signupMentor_post():
     email = request.form.get('email')
     username = request.form.get('username')
     password = request.form.get('email')
+    location = request.form.get('location')
+    pref1 = request.form.get('pref1')
+    pref2 = request.form.get('pref2')
+    pref3 = request.form.get('pref3')
+    pref4 = request.form.get('pref4')
+    pref5 = request.form.get('pref5')
 
     user = User.query.filter_by(email=email).first()
 
@@ -82,12 +77,13 @@ def signupMentor_post():
         return redirect(url_for('auth.signupMentor'))
 
     new_user = User(name=name, email=email, username=username,
-                    password=password, isMentor=True)
+                    password=generate_password_hash(password, method='sha256'), isMentor=True, location=location,
+                    pref1=pref1, pref2=pref2, pref3=pref3, pref4=pref4, pref5=pref5)
 
     db.session.add(new_user)
     db.session.commit()
 
-    return redirect(url_for('auth.preferences'), username)
+    return redirect(url_for('auth.login'))
 
 
 @auth.route('/login', methods=['POST', 'GET'])
