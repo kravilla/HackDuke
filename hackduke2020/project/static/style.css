@@ -1,7 +1,19 @@
+.body {
+  background-color: #99ffeb;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: #00e6b8;
   border: none;
   color: #FFFFFF;
   text-align: center;

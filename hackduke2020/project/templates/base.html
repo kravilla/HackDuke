@@ -6,35 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Flask Auth Example</title>
-    <link rel="stylesheet" href="static/styles.css" />
+    <link rel="stylesheet" href="static/style.css" />
 </head>
 
 <body>
-    <section class="hero is-primary is-fullheight">
-        <div class="hero-head">
-            <nav class="navbar">
-                <div class="container">
-
-                    <div id="navbarMenuHeroA" class="navbar-menu">
-                        <div class="navbar-end">
-                            <a href="{{ url_for('main.index') }}" class="navbar-item">
-                                Home
-                            </a>
-                            <a href="{{ url_for('auth.login') }}" class="navbar-item">
-                                Login
-                            </a>
-                            <a href="{{ url_for('auth.signup') }}" class="navbar-item">
-                                Sign Up
-                            </a>
-                            <a href="{{ url_for('auth.logout') }}" class="navbar-item">
-                                Logout
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <button class="button"><span>Hover </span></button>
-
+    <section class="">
+        <div class="buttons">
+              <div class="vertical-center">
+                <a href="/login" class="button"><span>Login </span></a>
+                <a href="/signup" class="button"><span>Sign Up </span></a>
+              </div>
         </div>
 
         <div class="hero-body">
