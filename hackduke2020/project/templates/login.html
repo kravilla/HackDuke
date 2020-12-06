@@ -1,29 +1,28 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
 
-{% block content %}
-<div class="column is-4 is-offset-4">
-    <h3 class="title">Login</h3>
-    <div class="box">
-        <form method="POST" action="/login">
-            <div class="field">
-                <div class="control">
-                    <input class="input is-large" type="email" name="email" placeholder="Your Email" autofocus="">
-                </div>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flask Auth Example</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-            <div class="field">
-                <div class="control">
-                    <input class="input is-large" type="password" name="password" placeholder="Your Password">
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="logInToAccount">Log in to your account below</h1>
+            <form class="form">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <div class="submitbutton">
+                    <a href="/home" id="loginbutton">Login</a>
                 </div>
-            </div>
-            <div class="field">
-                <label class="checkbox">
-                    <input type="checkbox">
-                    Remember me
-                </label>
-            </div>
-            <button class="button is-block is-info is-large is-fullwidth">Login</button>
-        </form>
+            </form>
+        </div>
+
     </div>
-</div>
-{% endblock %}
+</body>
+
+</html>

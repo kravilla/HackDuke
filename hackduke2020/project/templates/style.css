@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&family=Syne+Mono&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: 300;
 }
 
 html {
     height: 100%;
 }
+
 body {
     height: 100%;
-    font-family: "Montserrat", sans-serif;    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+	color: white;
+	font-weight: 300;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat fixed;
     background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -95,3 +101,87 @@ body {
       color: #FFFFFF;
     font-weight:normal;
 }
+
+form {
+  padding: 20px 2px;
+  z-index: 2;
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+form input {
+    display: block;
+    appearance: none;
+    outline: 0;
+    border: 1px solid white;
+    background-color: rgba(255,255,255,0.4);
+    width: 250px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    transition-duration: 0.25s;
+    font-weight: 300;
+    justify: center;
+    align: center;
+
+}
+
+form input:hover {
+  background-color: rgba(255,255,255,0.4);
+}
+
+form input:focus {
+    background-color: rgba(255,255,255,0.4);
+    width: 300px;
+    color: rgba(0,0,0,.5);
+}
+
+#loginbutton{
+  		appearance: none;
+		outline: 0;
+		border: 2px;
+		padding: 2px;
+		color: white;
+		border-radius: 3px;
+		width: 250px;
+		cursor: pointer;
+		font-size: 18px;
+		transition-duration: 0.25s;
+        text-decoration: none;
+        border: 1px solid #00e6b8;
+        align: center;
+}
+
+.submitbutton {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loginbutton:hover {
+  background-color: rgba(245, 247, 249,.3);
+}
+
+.logInToAccount {
+        margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    font-family: monospace;
+      font-size: 40px;
+      color: #FFFFFF;
+    font-weight:normal;
+}
+
+
